@@ -1,21 +1,39 @@
 import React, { useState, useEffect } from 'react';
+import { Alert } from 'react-native';
+
 import ButtonControl from '~/components/ButtonControl';
 import * as S from './styles';
 
 export default function Counter(props) {
   function increment() {
+    if(props.team2 === '') {
+      Alert.alert('Informe o nome da equipe 2')
+      return
+    }
     props.setCount2(props.count2 + 1);
   }
 
   function increment3() {
+    if(props.team2 === '') {
+      Alert.alert('Informe o nome da equipe 2')
+      return
+    }
     props.setCount2(props.count2 + 3);
   }
 
   function decrement() {
+    if(props.team2 === '') {
+      Alert.alert('Informe o nome da equipe 2')
+      return
+    }
     props.setCount2(props.count2 - 1);
   }
 
   function decrement3() {
+    if(props.team2 === '') {
+      Alert.alert('Informe o nome da equipe 2')
+      return
+    }
     props.setCount2(props.count2 - 3);
   }
 
